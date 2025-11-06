@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+
+{% block navbar %}
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ">
+      <li class="nav-item">
+        <a style="color: yellow;" class="nav-link active" href="{{url_for('home')}}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a style="color: white;" class="nav-link" href="{{url_for('algorithm')}}"> Algorithm</a>
+      </li>
+      <li class="nav-item">
+        <a style="color: white;" class="nav-link" href="{{url_for('prediction')}}"> Prediction</a>
+      </li>
+      <li class="nav-item">
+        <a style="color: white;" class="nav-link" href="{{url_for('graph')}}"> Graph</a>
+      </li>
+      <li class="nav-item">
+        <a style="color: white;" class="nav-link" href="{{url_for('index')}}">Logout</a>
+      </li>
+    </ul>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <center>
+    <section style="margin-top: 90px; padding: 30px;" class="slider_section ">
+      <div class="detail-box">
+        <h1 style="color: white;">
+          An Ensemble Deep Learning Model for Vehicular
+          Engine Health Prediction 
+        </h1>
+        <p style="color: white; text-align: justify;">
+          In the realm of predictive maintenance for vehicular engines, the accurate assessment of health conditions plays a pivotal role in enhancing reliability and reducing operational costs. This project introduces an ensemble deep learning approach aimed at predicting engine health based on diverse machine learning algorithms. The ensemble comprises Decision Trees, Random Forest, K-Nearest Neighbors (KNN), Linear Discriminant Analysis (LDA), Adaboost, and Logistic Regression, each contributing uniquely to the predictive model.
+          The methodology involves preprocessing engine sensor data to extract relevant features, followed by training each model on historical data to capture patterns indicative of engine health states. Subsequently, the ensemble framework aggregates individual model outputs to provide a consolidated prediction, yielding superior accuracy compared to standalone algorithms.
+
+        </p>
+      </div>
+    </section>
+  </center>
+
+{% endblock %}
